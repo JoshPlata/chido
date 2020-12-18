@@ -49,6 +49,11 @@ def decode_from_b64(b64string):
 
 app= Flask(__name__)
 
+
+@app.route('/')
+def hello():
+    return 'Hello World!'
+
 @app.route('/getsquare2',methods=['POST'])
 def index():
     solicitud=request.get_json()
@@ -112,4 +117,4 @@ def index():
     return {"xmin":xmin, "ymin":ymin, "xmax":xmax, "ymax":ymax }
 
 
-app.run(host = 'localhost',port=65535)
+#app.run(host = 'localhost',port=65535)
