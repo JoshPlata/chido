@@ -120,6 +120,3 @@ def get_square(item: Item):
     print(ymax) 
    # img.save(OUTPUT_IMAGE)
     return {"xmin":xmin, "ymin":ymin, "xmax":xmax, "ymax":ymax }
-
-if __name__ == "__main__":
-    uvicorn.run(app, host="localhost", port=65535)
